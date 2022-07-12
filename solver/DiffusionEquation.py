@@ -151,7 +151,7 @@ class CrankNicholson(SpaceDiscrete,TimeDiscrete):
 
         '''
         u0=self.discrete_space()
-        print(u0.shape)
+
         p = len(u0)
         s_steps=self.s_steps
         # Pre-allocation
@@ -164,7 +164,7 @@ class CrankNicholson(SpaceDiscrete,TimeDiscrete):
         h = (self.finT - self.init) / t_steps #time steps
         uHist[0, :] = (u)
         f=self.CrankFunction
-        print(self.CrankFunction(t + h, u))
+
         for n in [i for i in range(0, t_steps)]:
             def g(v):
                 l = u

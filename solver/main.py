@@ -8,4 +8,6 @@ def f(x):return math.sin(2*(math.pi)*x)
 
 
 f=np.vectorize(f)
-de.CrankNicholson([0,1000],1000,30,f,1,0.0001).plot()
+[thist,uHist]=de.CrankNicholson([0,1],3,3,f,1,1).calculate()
+print(uHist)
+
